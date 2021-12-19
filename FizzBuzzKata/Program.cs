@@ -5,10 +5,14 @@ public class FizzBuzz
 {
     public string GetFizzBuzz(int number)
     {
-        if (number == 3 || number == 6 || number == 9)
+        if (isFizz(number))
             return "Fizz";
         
-
         return number.ToString();
+    }
+
+    private bool isFizz(int number)
+    {
+        return number % 3 == 0;
     }
 } 
