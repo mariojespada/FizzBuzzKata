@@ -7,12 +7,20 @@ public class FizzBuzz
     {
         if (isFizz(number))
             return "Fizz";
-        
+
+        if (isBuzz(number))
+            return "Buzz";
+
         return number.ToString();
     }
 
     private bool isFizz(int number)
     {
         return number % 3 == 0;
+    }
+
+    private bool isBuzz(int number)
+    {
+        return number % 5 == 0;
     }
 } 

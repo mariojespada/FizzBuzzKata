@@ -25,11 +25,21 @@ namespace FizzBuzzKataTests
         [InlineData(3)]
         [InlineData(6)]
         [InlineData(9)]
-        public void return_Fizz_when_number_is_3(int number)
+        public void return_Fizz_when_number_is_multiple_of_3(int number)
         {
             string result = _fizzBuzz.GetFizzBuzz(number);
 
             Assert.Equal("Fizz", result);
+        }
+
+        [Theory]
+        [InlineData(5)]
+        [InlineData(10)]
+        public void return_Buzz_when_number_is_multiple_of_5(int number)
+        {
+            string result = _fizzBuzz.GetFizzBuzz(number);
+
+            Assert.Equal("Buzz", result);
         }
     }
 }
