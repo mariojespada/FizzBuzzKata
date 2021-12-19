@@ -25,13 +25,13 @@ namespace FizzBuzzKataTests
         }
 
         [Fact]
-        public void return_Fizz_when_number_is_3()
+        public void return_4_when_number_is_4()
         {
             FizzBuzz fizzBuzz = new();
 
-            string result = fizzBuzz.GetFizzBuzz(3);
+            string result = fizzBuzz.GetFizzBuzz(4);
 
-            Assert.Equal("Fizz", result);
+            Assert.Equal("4", result);
         }
     }
 }
