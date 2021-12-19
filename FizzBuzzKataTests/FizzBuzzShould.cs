@@ -41,5 +41,14 @@ namespace FizzBuzzKataTests
 
             Assert.Equal("Buzz", result);
         }
+
+        [Theory]
+        [InlineData(15)]
+        public void return_Buzz_when_number_is_multiple_of_3_and_5(int number)
+        {
+            string result = _fizzBuzz.GetFizzBuzz(number);
+
+            Assert.Equal("FizzBuzz", result);
+        }
     }
 }
