@@ -2,7 +2,7 @@ using Xunit;
 
 namespace FizzBuzzKataTests
 {
-    public class UnitTest1
+    public class FizzBuzzShould
     {
         [Fact]
         public void return_1_when_number_is_1()
