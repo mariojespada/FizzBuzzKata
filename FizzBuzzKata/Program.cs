@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-var numbers = new FizzBuzz();
+﻿var numbers = new FizzBuzz();
 numbers.PrintNumbers();
 
 public class FizzBuzz

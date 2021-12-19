@@ -35,6 +35,7 @@ namespace FizzBuzzKataTests
         [Theory]
         [InlineData(5)]
         [InlineData(10)]
+        [InlineData(20)]
         public void return_Buzz_when_number_is_multiple_of_5(int number)
         {
             string result = _fizzBuzz.GetFizzBuzz(number);
@@ -44,6 +45,8 @@ namespace FizzBuzzKataTests
 
         [Theory]
         [InlineData(15)]
+        [InlineData(30)]
+        [InlineData(45)]
         public void return_Buzz_when_number_is_multiple_of_3_and_5(int number)
         {
             string result = _fizzBuzz.GetFizzBuzz(number);
