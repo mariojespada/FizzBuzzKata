@@ -4,34 +4,32 @@ namespace FizzBuzzKataTests
 {
     public class FizzBuzzShould
     {
-        [Fact]
-        public void return_1_when_number_is_1()
+        private FizzBuzz _fizzBuzz;
+        public FizzBuzzShould()
         {
-            FizzBuzz fizzBuzz = new();
-
-            string result = fizzBuzz.GetFizzBuzz(1);
-
-            Assert.Equal("1", result);
+            _fizzBuzz = new FizzBuzz();
         }
 
-        [Fact]
-        public void return_2_when_number_is_2()
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(4)]
+        public void return_number_when_number_is_not_multiple_of_3(int number)
         {
-            FizzBuzz fizzBuzz = new();
+            string result = _fizzBuzz.GetFizzBuzz(number);
 
-            string result = fizzBuzz.GetFizzBuzz(2);
-
-            Assert.Equal("2", result);
+            Assert.Equal(number.ToString(), result);
         }
 
-        [Fact]
-        public void return_4_when_number_is_4()
+        [Theory]
+        [InlineData(3)]
+        [InlineData(6)]
+        [InlineData(9)]
+        public void return_Fizz_when_number_is_3(int number)
         {
-            FizzBuzz fizzBuzz = new();
+            string result = _fizzBuzz.GetFizzBuzz(number);
 
-            string result = fizzBuzz.GetFizzBuzz(4);
-
-            Assert.Equal("4", result);
+            Assert.Equal("Fizz", result);
         }
     }
 }
